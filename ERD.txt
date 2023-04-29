@@ -1,0 +1,38 @@
+customers
+-
+customer_id SERIAL pk
+customer_name varchar
+gender varchar
+age int
+home_address varchar
+zip_code varchar
+city varchar
+state varchar
+country varchar
+
+products
+-
+product_ID SERIAL pk
+product_type varchar	
+product_name varchar	
+size varchar	
+colour varchar	
+price decimal	
+quantity int	
+
+orders
+-
+order_id SERIAL pk	
+customer_id integer pk fk - customers.customer_id 
+payment varchar
+order_date date	
+delivery_date date
+
+sales
+-
+sales_id SERIAL pk	
+order_id int pk fk - orders.order_id	
+product_id int pk fk - products.product_ID	
+price_per_unit decimal	
+quantity int	
+total_price decimal
