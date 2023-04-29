@@ -8,10 +8,6 @@ This project will analyze retail sales, including product types, customer detail
 
 In today's highly competitive market, businesses need to have a comprehensive understanding of their customers, sales trends, and product performance to remain successful. The goal of this project is to analyze e-commerce sales data using various analytical techniques and tools to gain insights into customer behavior, sales trends, and revenue generation. Furthermore, the insights gained from this project will help the online businesses identify their top-performing products, target their marketing efforts more effectively, and optimize their sales strategies to increase revenue and customer satisfaction.
 
-## Data Description
-
-The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, preparation, analysis, predictions, and visualization.
-
 ## Objectives
 
 1. Analyze the customer behavior and trends.
@@ -109,8 +105,11 @@ We created an ERD using QuickDBD
 
 ![](Resources/sales_table.png)
 
+### Data Description
 
-### 3. Data Cleaning with Python 
+The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, preparation, analysis, predictions, and visualization.
+
+### Data Cleaning with Python 
 
 To clean the data, we followed a systematic process that involved several steps. First, we assessed the data to identify any issues, such as missing values, duplicates, or errors. We then decided on a strategy for handling each of these issues.
 
