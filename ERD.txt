@@ -17,14 +17,14 @@ product_type varchar
 product_name varchar	
 size varchar	
 colour varchar	
-price decimal	
+price int	
 quantity int	
 
 orders
 -
 order_id SERIAL pk	
 customer_id integer pk fk - customers.customer_id 
-payment varchar
+payment int
 order_date date	
 delivery_date date
 
@@ -33,6 +33,6 @@ sales
 sales_id SERIAL pk	
 order_id int pk fk - orders.order_id	
 product_id int pk fk - products.product_ID	
-price_per_unit decimal	
+price_per_unit int	
 quantity int	
-total_price decimal
+total_price int
