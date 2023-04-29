@@ -81,6 +81,12 @@ The dataset used in this project includes information about customer orders and 
 
 ### 1. Data Collection (Natalia needs to provide this information.)
 
+### 2. Data Exploration
+
+### ERD
+
+![](Resources/ERD_1.png)
+
 **Customers Dataset**
 
 ![](Resources/customers_table.png)
@@ -97,19 +103,12 @@ The dataset used in this project includes information about customer orders and 
 
 ![](Resources/sales_table.png)
 
-### 2. Data Exploration
 
 ### 3. Data Cleaning with Python 
 
-- **Checking for duplicates:** We looked for any duplicate records in the datasets using Python tools like Pandas. Duplicate records can impact the accuracy of analysis; therefore, it is  essential to remove them.
+We checked for duplicates, missing values, outliers, and inconsistencies. Additionally, we remove unnecessary columns.
 
-- **Checking for missing values:**
-
-- **Checking for outliers:** 
-
-- **Checking for inconsistencies:** 
-
-### Python Tools used for Data Cleaning
+**Python Tools used for Data Cleaning**
 
 - **Jupyter Notebook:** To write and execute the Python code.
 
