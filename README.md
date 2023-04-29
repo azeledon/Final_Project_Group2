@@ -85,6 +85,8 @@ The dataset used in this project includes information about customer orders and 
 
 ### ERD
 
+We created an ERD using QuickDBD
+
 ![](Resources/ERD_1.png)
 
 **Customers Dataset**
