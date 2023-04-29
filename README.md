@@ -8,7 +8,7 @@ In today's highly competitive e-commerce market, businesses need to have a compr
 
 ## Data Description
 
-The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, data preparation, data analysis, and data visualization.
+The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, preparation, analysis, predictions, and visualization.
 
 ## Objectives
 
