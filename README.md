@@ -83,6 +83,10 @@ The dataset contains 4 CSV files containing sales details for the 12 months of t
 
 ### 2. Data Exploration
 
+### Data Description
+
+The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, preparation, analysis, predictions, and visualization.
+
 ### ERD
 
 We created an ERD using QuickDBD
@@ -104,10 +108,6 @@ We created an ERD using QuickDBD
 **Sales Dataset**
 
 ![](Resources/sales_table.png)
-
-### Data Description
-
-The dataset used in this project includes information about customer orders and sales transactions. The data is organized into four main tables: customer information, order details, product information, and sales transactions. By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. To achieve this goal, we will use several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. This project will follow a structured methodology that includes data exploration, preparation, analysis, predictions, and visualization.
 
 ### Data Cleaning with Python 
 
