@@ -1,5 +1,7 @@
 # Sales Analysis
 
+![](Resources/pexels-photomix-company-230544.jpg)
+
 ## Project Overview
 
 In today's highly competitive e-commerce market, businesses need to have a comprehensive understanding of their customers, sales trends, and product performance to remain successful. The goal of this project is to analyze e-commerce sales data using various analytical techniques and tools to gain insights into customer behavior, sales trends, and revenue generation. Furthermore, the insights gained from this project will help e-commerce businesses identify their top-performing products, target their marketing efforts more effectively, and optimize their sales strategies to increase revenue and customer satisfaction.
