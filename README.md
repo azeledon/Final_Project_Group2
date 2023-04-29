@@ -77,6 +77,22 @@ The dataset used in this project includes information about customer orders and 
 
 ### 1. Data Collection (Natalia needs to provide this information.)
 
+**Customers Dataset**
+
+![](Resources/customers_table.png)
+
+**Orders Dataset**
+
+![](Resources/orders_table.png)
+
+**Products Dataset**
+
+![](Resources/products_table.png)
+
+**Sales Dataset**
+
+![](Resources/sales_table.png)
+
 ### 2. Data Exploration
 
 ### 3. Data Cleaning with Python 
