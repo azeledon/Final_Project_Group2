@@ -127,3 +127,10 @@ After applying these cleaning strategies, we verified the data to ensure that it
 We created an ERD using QuickDBD
 
 ![](Resources/ERD_1.png)
+
+## Data Analysis
+
+**What are the most profitable product types and sizes among our customers?**
+
+![](Resources/most_profitable_product_types_and_sizes.png)
+
