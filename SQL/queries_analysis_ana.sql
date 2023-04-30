@@ -49,4 +49,74 @@ JOIN orders ON customers.customer_id = orders.customer_id
 JOIN sales ON orders.order_id = sales.order_id
 GROUP BY customers.city;
 
---
+----Inferential Statistics
+
+--Calculate the total quantity sold for each product and size combination
+SELECT 
+    p.product_type,
+    p.product_name,
+    p.size,
+    SUM(s.quantity) AS total_quantity_sold
+FROM 
+    products p
+    JOIN sales s ON p.product_id = s.product_id
+GROUP BY 
+    p.product_type,
+    p.product_name,
+    p.size
+ORDER BY 
+    total_quantity_sold DESC;
+
+-- Join the new table with the customer table to identify demographic information for each customer and calculate the total quantity sold:
+
+SELECT 
+    p.product_type,
+    p.product_name,
+    p.size,
+    c.gender,
+    c.age,
+    c.city,
+    c.state,
+    c.country,
+    SUM(s.quantity) AS total_quantity_sold
+FROM 
+    products p
+    JOIN sales s ON p.product_id = s.product_id
+    JOIN orders o ON s.order_id = o.order_id
+    JOIN customers c ON o.customer_id = c.customer_id
+GROUP BY 
+    p.product_type,
+    p.product_name,
+    p.size,
+    c.gender,
+    c.age,
+    c.city,
+    c.state,
+    c.country
+ORDER BY 
+    total_quantity_sold DESC;
+	
+--Determine which product types and sizes are most profitable, taking into account both sales volume and profit margins. 
+
+SELECT 
+    p.product_type,
+    p.size,
+    SUM(s.total_price) AS total_revenue,
+    SUM(s.total_price - (s.quantity * p.price)) AS total_profit
+FROM 
+    products p
+    JOIN sales s ON p.product_id = s.product_id
+GROUP BY 
+    p.product_type,
+    p.size
+ORDER BY 
+    total_profit DESC;
+
+--Calculate total profit of sales
+SELECT 
+    SUM(s.total_price) AS total_revenue,
+    SUM(s.quantity * p.price) AS total_cost,
+    SUM(s.total_price - s.quantity * p.price) AS total_profit
+FROM 
+    products p
+    JOIN sales s ON p.product_id = s.product_id;
