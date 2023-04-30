@@ -147,18 +147,19 @@ We created an ERD using QuickDBD
 
 **What are the most profitable product types and sizes among our customers?**
 
-Top 10 most profitable product types and sizes:
-   product_type   size    total_revenue ($)
-1         Shirt    S          74731
-2        Jacket    XS         74458
-3        Jacket    M          73251
-4        Jacket    L          72548
-5        Jacket    S          72339
-6         Shirt    M          71589
-7       Trousers   XL          70475
-8      Trousers    M          70022
-9         Shirt    XS         70001
-10     Trousers    L          69863
+- **Top 10 most profitable product types and sizes:**
+   
+   **product_type   size    total_revenue ($)**
+1.         Shirt    S          74731
+2.       Jacket    XS         74458
+3.        Jacket    M          73251
+4.        Jacket    L          72548
+5.        Jacket    S          72339
+6.         Shirt    M          71589
+7.       Trousers   XL          70475
+8.      Trousers    M          70022
+9.         Shirt    XS         70001
+10.     Trousers    L          69863
 
 ![](Resources/top_ten_most_profitable_products.png)
 
