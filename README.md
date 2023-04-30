@@ -190,6 +190,16 @@ Total quantity sold: 236
 
 ![](Resources/quantity_sold_by_age.png)
 
+- The average age of customers in the dataset is approximately 48.8 years.
+- The average quantity sold per transaction is approximately 2.05 units.
+- The standard deviation of the quantity sold is 0.89 units, indicating that there is relatively low variability in the amount sold.
+- The minimum age in the dataset is 20 years old and the minimum quantity sold is 1 unit.
+- 25% of customers are under 34 years old and purchased 1 unit.
+- 50% of customers are between 34 and 63 years old and purchased 2 units.
+- 75% of customers are over 63 years old and purchased 3 units.
+- The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
+
+
 
 
 
