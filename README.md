@@ -201,6 +201,13 @@ Total quantity sold: 236
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
 
+## Sales Predictions
+
+### Predict the top-selling product types in the next quarter.
+
+![](Resources/sales_prediction_next_quarter.png)
+
+
 ## Problems Found
 
 We could not detect seasonality in this data set (i.e., whether there are certain months of the year when sales are consistently higher or lower). The seasonal_decompose function requires at least two full seasonal cycles to properly decompose the time series. Since we use monthly data, a seasonal cycle would be 12 months, so we would need at least 24 months of data. In this case, we only have 10 months of data, which is not enough to perform the seasonal decomposition. Therefore, we cannot analyze the seasonality of the sales data with this particular dataset. We would need to gather more data over a longer period of time to perform this analysis.
