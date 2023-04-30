@@ -35,11 +35,11 @@ In today's highly competitive market, businesses need to have a comprehensive un
 
 - **Data Analyst:** This person will be responsible for exploring and analyzing the customer orders and sales data to identify any patterns, trends, or outliers that may be useful for analysis. They will also clean and preprocess the data, including handling missing or invalid values, converting data types, and merging tables as needed. The Data Analyst will use programming languages such as Python and SQL to conduct exploratory data analysis and perform statistical analysis. They will collaborate with the other team members to identify key insights and trends in the data and provide recommendations based on their findings.
 
-- **Data Scientist:** This person will be responsible for building predictive models using regression, clustering, and other machine learning techniques to forecast future sales, customer churn, and customer lifetime value. They will use programming languages such as Python and R to develop these models and test their accuracy. The Data Scientist will collaborate with the Data Analyst to ensure that the data is clean and properly prepared for modeling. They will also work closely with the Tableau Developer to create interactive visualizations that effectively communicate the results of the predictive modeling.
+- **Data Scientist:** This person will be responsible for building predictive models using regression, clustering, and other machine learning techniques to forecast future sales, customer churn, and customer lifetime value. She will use programming languages such as Python and R to develop these models and test their accuracy. The Data Scientist will collaborate with the Data Analyst to ensure that the data is clean and properly prepared for modeling. She will also work closely with the Tableau Developer to create interactive visualizations that effectively communicate the results of the predictive modeling.
 
 - **Tableau Developer:** This person will be responsible for creating interactive and dynamic visualizations using Tableau that effectively communicate key findings and insights from the data analysis and predictive modeling. They will work closely with the Data Analyst and Data Scientist to identify the most important insights to communicate and the best way to display them. The Tableau Developer will also create a dashboard that provides a comprehensive overview of the data analysis and predictive modeling results.
 
-- **Project Manager:** This person will be responsible for managing the overall project and ensuring that it is completed on time and within budget. They will work closely with all team members to ensure that each person's role is clearly defined and that everyone is meeting their deadlines. The Project Manager will also communicate with stakeholders to provide regular updates on the project's progress and ensure that their needs are being met.
+- **Project Manager:** This person will be responsible for managing the overall project and ensuring that it is completed on time. She will work closely with all team members to ensure that each person's role is clearly defined and that everyone is meeting their deadlines. The Project Manager will also communicate with stakeholders to provide regular updates on the project's progress and ensure that their needs are being met.
 
 ## Project Phases
 
@@ -147,19 +147,7 @@ We created an ERD using QuickDBD
 
 **What are the most profitable product types and sizes among our customers?**
 
-- **Top 10 most profitable product types and sizes:**
-   
-   **product_type   size    total_revenue ($)**
-1.         Shirt    S          74731
-2.       Jacket    XS         74458
-3.        Jacket    M          73251
-4.        Jacket    L          72548
-5.        Jacket    S          72339
-6.         Shirt    M          71589
-7.       Trousers   XL          70475
-8.      Trousers    M          70022
-9.         Shirt    XS         70001
-10.     Trousers    L          69863
+![](Resources/table_topten_profitable_by_gender.png)
 
 ![](Resources/top_ten_most_profitable_products.png)
 
@@ -183,11 +171,11 @@ Total quantity sold: 236
 
 ![](Resources/top_ten_products_by_sales.png)
 
-**Which gender has the highest total quantity sold?"
+**Which gender has the highest total quantity sold?"**
 
 - Gender with the highest total quantity sold overall: Female
 
-![](Resources/table_best_selling_per_gender)
+![](Resources/table_best_selling_per_gender.png)
 
 - The mean quantity sold across all genders is 2.048594, which indicates that on average, 2 products are sold per purchase.
 - The median quantity sold is 2, which suggests that half of the purchases consist of 2 products.
@@ -197,7 +185,6 @@ Total quantity sold: 236
 **What are the top selling products by gender?**
 
 ![](Resources/sales_by_gender_product.png)
-
 
 **How does the quantity sold vary across different age groups? Are there any trends or patterns in the quantity sold by age group?**
 
