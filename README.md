@@ -184,6 +184,8 @@ Total quantity sold: 236
 
 **What are the top selling products by gender?**
 
+![](table_best_selling_per_gender.png)
+
 ![](Resources/sales_by_gender_product.png)
 
 **How does the quantity sold vary across different age groups? Are there any trends or patterns in the quantity sold by age group?**
