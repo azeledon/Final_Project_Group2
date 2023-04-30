@@ -179,5 +179,14 @@ Total quantity sold: 236
 
 ![](Resources/total_quantity_sold_by_product.png)
 
+**What are the top selling products?**
+
+![](Resources/top_ten_products_by_sales.png)
+
+**What are the top selling products by gender?**
+
+
+
+
 
 
