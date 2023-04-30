@@ -175,18 +175,18 @@ Total quantity sold: 236
 
 - Gender with the highest total quantity sold overall: Female
 
+**What are the top selling products by gender?**
+
 ![](Resources/table_best_selling_per_gender.png)
+
+![](table_best_selling_per_gender.png)
+
+![](Resources/sales_by_gender_product.png)
 
 - The mean quantity sold across all genders is 2.048594, which indicates that on average, 2 products are sold per purchase.
 - The median quantity sold is 2, which suggests that half of the purchases consist of 2 products.
 - The mode quantity sold is mostly 1 or 2 products, with some exceptions.
 - The standard deviation of the quantity sold is 0.889753, indicating that there is some variability in the amount of products sold per purchase.
-
-**What are the top selling products by gender?**
-
-![](table_best_selling_per_gender.png)
-
-![](Resources/sales_by_gender_product.png)
 
 **How does the quantity sold vary across different age groups? Are there any trends or patterns in the quantity sold by age group?**
 
