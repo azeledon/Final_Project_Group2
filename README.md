@@ -207,6 +207,7 @@ Total quantity sold: 236
 
 ![](Resources/sales_prediction_next_quarter.png)
 
+This prediction model was built using a linear regression algorithm in Python. The dataset includes three product types - Trousers, Shirt, and Jacket, along with their corresponding total quantities. The dataset was split into a training set and a test set using the train_test_split function from scikit-learn. The training set was then transformed into a sparse matrix of token counts using the CountVectorizer function. The LinearRegression function from scikit-learn was used to train the model on the transformed training set. The trained model was then used to make predictions on the test set. The mean squared error was calculated using the mean_squared_error function from scikit-learn. Finally, new data was provided to the model for prediction, and the output was displayed. The model predicts the total quantity of each product type for the next quarter.
 
 ## Problems Found
 
