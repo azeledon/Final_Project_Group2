@@ -179,11 +179,18 @@ Total quantity sold: 236
 
 ![](Resources/total_quantity_sold_by_product.png)
 
-**What are the top selling products?**
+**What are the best selling products?**
 
 ![](Resources/top_ten_products_by_sales.png)
 
 **What are the top selling products by gender?**
+![](Resources/sales_by_gender_product.png)
+
+**How does the quantity sold vary across different age groups? Are there any trends or patterns in the quantity sold by age group?**
+
+![](Resources/quantity_sold_by_age.png)
+
+
 
 
 
