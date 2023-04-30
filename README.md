@@ -1,6 +1,6 @@
 # Sales Analysis
 
-![](Resources/pexels-photomix-company-230544.jpg)
+![](Resources/max-harlynking-CDLBz2lPpLM-unsplash.jpg)
 
 ## Project Overview
 
