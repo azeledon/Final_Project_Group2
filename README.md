@@ -93,10 +93,16 @@ To provide a comprehensive description of the data, the team used the "describe"
 Furthermore, the team analyzed the products and sales CSV files using the "describe" function in a Jupyter Notebook file. The findings are as follows:
 
 - The average amount spent on a single product was found to be $103.50.
+- Average price of products is $105.81
 - The highest-priced product offered by the company was priced at $119.00.
 - The least expensive product sold had a price of $90.00.
 - The data indicated that no customer had purchased more than three items.
 - The most popular item sold was purchased 80 times.
+- Range of order dates was 2021-1-1 to 2021-9-9
+- Range of prices per unit: $90.00-$119.00
+- Range of quantities sold in sales data set: 1-3
+- Average quantity of products sold per order: 1.99
+- Most common product type in the product info data set:  Jacket
 
 ![](Resources/product_types_distribution.png)
 
@@ -131,6 +137,13 @@ We created an ERD using QuickDBD
 ![](Resources/ERD_1.png)
 
 ## Data Analysis
+
+**Sales Trend Over Months**
+
+- The month with the highest sales was March with a total of $131,364.00
+- The month with the lowest sales was October with a total of $84,266.00
+
+![](Resources/sales_trends_over_months.png)
 
 **What are the most profitable product types and sizes among our customers?**
 
