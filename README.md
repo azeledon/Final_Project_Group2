@@ -80,6 +80,14 @@ To provide a comprehensive description of the data, the team used the "describe"
 - The oldest customer was found to be 80 years old.
 - The dataset included a total of 1000 orders.
 
+![](Resources/age_distribution.png)
+
+![](Resources/gender_age_description.png)
+
+![](Resources/customers_by_state_distribution.png)
+
+![](Resources/top_ten_customers_by_city.png)
+
 Furthermore, the team analyzed the products and sales CSV files using the "describe" function in a Jupyter Notebook file. The findings are as follows:
 
 - The average amount spent on a single product was found to be $103.50.
@@ -87,6 +95,10 @@ Furthermore, the team analyzed the products and sales CSV files using the "descr
 - The least expensive product sold had a price of $90.00.
 - The data indicated that no customer had purchased more than three items.
 - The most popular item sold was purchased 80 times.
+
+![](Resources/product_types_distribution.png)
+
+![](Resources/product_prices_distribution.png)
 
 By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. This goal will be achieved by using several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. 
 
