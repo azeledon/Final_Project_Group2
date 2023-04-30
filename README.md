@@ -100,6 +100,8 @@ Furthermore, the team analyzed the products and sales CSV files using the "descr
 
 ![](Resources/product_prices_distribution.png)
 
+![](Resources/delivery_time_distribution.png)
+
 By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. This goal will be achieved by using several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. 
 
 ### Data Cleaning with Python 
