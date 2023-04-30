@@ -73,6 +73,8 @@ The dataset chosen for this project - Sales - was retrieved from https://www.kag
 
 ![](Resources/sales_table.png)
 
+### Demographic Information
+
 To provide a comprehensive description of the data, the team used the "describe" function in a Jupyter notebook file. The analysis revealed several key aspects related to customers and orders:
 
 - On average, customers were found to be 49.86 years old.
