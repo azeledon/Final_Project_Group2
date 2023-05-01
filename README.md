@@ -151,7 +151,7 @@ We created an ERD using QuickDBD
 
 ![](Resources/top_ten_most_profitable_products.png)
 
-**What are the products with the highest and lowest sales?**
+**What are the products with the highest and lowest sales? What are the best selling products?**
 
 - **Product with the highest sales:**
 
@@ -166,8 +166,6 @@ Total quantity sold: 527
 Total quantity sold: 236
 
 ![](Resources/total_quantity_sold_by_product.png)
-
-**What are the best selling products?**
 
 ![](Resources/top_ten_products_by_sales.png)
 
