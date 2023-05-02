@@ -151,7 +151,7 @@ We created an ERD using QuickDBD
 
 ![](Resources/top_ten_most_profitable_products.png)
 
-**What are the products with the highest and lowest sales?**
+**What are the products with the highest and lowest sales? What are the best selling products?**
 
 - **Product with the highest sales:**
 
@@ -166,8 +166,6 @@ Total quantity sold: 527
 Total quantity sold: 236
 
 ![](Resources/total_quantity_sold_by_product.png)
-
-**What are the best selling products?**
 
 ![](Resources/top_ten_products_by_sales.png)
 
@@ -200,6 +198,14 @@ Total quantity sold: 236
 - 50% of customers are between 34 and 63 years old and purchased 2 units.
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
+
+## Sales Predictions
+
+### Predict the top-selling product types in the next quarter.
+
+![](Resources/sales_prediction_next_quarter.png)
+
+This prediction model was built using a linear regression algorithm in Python. The dataset includes three product types - Trousers, Shirt, and Jacket, along with their corresponding total quantities. The dataset was split into a training set and a test set using the train_test_split function from scikit-learn. The training set was then transformed into a sparse matrix of token counts using the CountVectorizer function. The LinearRegression function from scikit-learn was used to train the model on the transformed training set. The trained model was then used to make predictions on the test set. The mean squared error was calculated using the mean_squared_error function from scikit-learn. Finally, new data was provided to the model for prediction, and the output was displayed. The model predicts the total quantity of each product type for the next quarter.
 
 ## Problems Found
 
