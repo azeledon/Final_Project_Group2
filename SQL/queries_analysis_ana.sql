@@ -120,3 +120,64 @@ SELECT
 FROM 
     products p
     JOIN sales s ON p.product_id = s.product_id;
+
+
+--Average Order Value (AOV) 
+SELECT AVG(total_price) as AOV
+FROM sales
+
+--Customer Lifetime Value (CLV)
+SELECT 
+    c.customer_id,
+    c.customer_name,
+    DATE_PART('day', NOW() - MIN(o.order_date))/30 AS customer_age_in_months,
+    SUM(s.total_price) AS total_spent,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    SUM(s.total_price) / COUNT(DISTINCT o.order_id) AS average_order_value,
+    SUM(s.total_price) / DATE_PART('day', NOW() - MIN(o.order_date)) AS customer_lifetime_value
+FROM 
+    customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    JOIN sales s ON o.order_id = s.order_id
+GROUP BY 
+    c.customer_id,
+    c.customer_name
+
+--Churn Rate 
+SELECT 
+    COUNT(DISTINCT o.customer_id) AS total_customers,
+    COUNT(DISTINCT CASE WHEN o.order_date < '2022-01-01' AND o.delivery_date < '2022-01-01' THEN o.customer_id END) AS churned_customers,
+    COUNT(DISTINCT CASE WHEN o.order_date >= '2022-01-01' OR o.delivery_date >= '2022-01-01' THEN o.customer_id END) AS active_customers,
+    COUNT(DISTINCT CASE WHEN o.order_date >= '2022-01-01' OR o.delivery_date >= '2022-01-01' THEN o.customer_id END) / CAST(COUNT(DISTINCT o.customer_id) AS FLOAT) AS churn_rate
+FROM 
+    orders o
+WHERE 
+    o.order_date < '2022-01-01' AND o.delivery_date < '2022-01-01';
+
+-- "What are the top 10 product types sold, by total quantity, between June 1st, 2021 and September 30th, 2021?"
+
+SELECT 
+    products.product_type,
+    SUM(sales.quantity) AS total_quantity
+FROM 
+    sales
+JOIN 
+    products ON sales.product_id = products.product_id
+JOIN 
+    orders ON sales.order_id = orders.order_id
+WHERE 
+    orders.delivery_date BETWEEN '2021-06-01' AND '2021-09-30'
+GROUP BY 
+    products.product_type
+ORDER BY 
+    total_quantity DESC
+LIMIT 10;
+
+--"What are the product types sold between April 1st, 2021 and June 30th, 2021, and how many units were sold for each product type, sorted in descending order of total quantity sold?"
+SELECT p.product_type, SUM(s.quantity) as total_quantity
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+JOIN orders o ON s.order_id = o.order_id
+WHERE o.order_date >= '2021-04-01' AND o.order_date <= '2021-06-30'
+GROUP BY p.product_type
+ORDER BY total_quantity DESC;
