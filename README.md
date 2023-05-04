@@ -213,9 +213,9 @@ This sales forecast was created using an ARIMA (Autoregressive Integrated Moving
 
 ## Results
 
-1. The ARIMA forecast model predicted that Jacket sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
-2. The ARIMA forecast model predicted that Shirt sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
-3. The ARIMA forecast model predicted that Trousers sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
+1. The ARIMA forecast model predicted that Jacket sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
+2. The ARIMA forecast model predicted that Shirt sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
+3. The ARIMA forecast model predicted that Trousers sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
 
 ## Model 2: Predict the top-selling product types in the next quarter.
 
