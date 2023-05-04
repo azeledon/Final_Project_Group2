@@ -199,7 +199,9 @@ Total quantity sold: 236
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
 
-## ARIMA Sales Forecasting Model
+# Predictions
+
+## Model 1: ARIMA Sales Forecasting Model
 
 - **What are the forecasted sales for the next four months for each product?**
 
@@ -215,10 +217,11 @@ This sales forecast was created using an ARIMA (Autoregressive Integrated Moving
 2. The ARIMA forecast model predicted that Shirt sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
 3. The ARIMA forecast model predicted that Trousers sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
 
-
-### Predict the top-selling product types in the next quarter.
+## Model 2: Predict the top-selling product types in the next quarter.
 
 ![](Resources/sales_prediction_next_quarter.png)
+
+## Model Description
 
 This prediction model was built using a linear regression algorithm in Python. The dataset includes three product types - Trousers, Shirt, and Jacket, along with their corresponding total quantities. The dataset was split into a training set and a test set using the train_test_split function from scikit-learn. The training set was then transformed into a sparse matrix of token counts using the CountVectorizer function. The LinearRegression function from scikit-learn was used to train the model on the transformed training set. The trained model was then used to make predictions on the test set. The mean squared error was calculated using the mean_squared_error function from scikit-learn. Finally, new data was provided to the model for prediction, and the output was displayed. The model predicts the total quantity of each product type for the next quarter.
 
