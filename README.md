@@ -203,7 +203,7 @@ Total quantity sold: 236
 
 - **What are the forecasted sales for the next four months for each product?**
 
-1[](Resources/sales_forecast.png)
+![](Resources/sales_forecast.png)
 
 ## Model Description
 
