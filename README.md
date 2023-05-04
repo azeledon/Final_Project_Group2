@@ -203,6 +203,8 @@ Total quantity sold: 236
 
 - **What are the forecasted sales for the next four months for each product?**
 
+1[](Resources/sales_forecast.png)
+
 ## Model Description
 
 This sales forecast was created using an ARIMA (Autoregressive Integrated Moving Average) model. The model is fitted to the historical sales data for each product type to identify patterns in the data and to forecast future sales. The ARIMA model is a type of time series model that takes into account the past values and errors in the data to make predictions. The order of the model, specified as (1,1,1), represents the number of autoregressive, differencing, and moving average terms used in the model. Autoregressive terms capture the relationship between the current value and the previous values, while the moving average terms capture the relationship between the errors and their previous values. The differencing term is used to remove any trend or seasonality present in the data. The forecasted values obtained from the ARIMA model are then stored in the forecast key of the corresponding product's dictionary and printed for each product type.
