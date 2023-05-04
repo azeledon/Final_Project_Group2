@@ -199,7 +199,20 @@ Total quantity sold: 236
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
 
-## Sales Predictions
+## ARIMA Sales Forecasting Model
+
+- **What are the forecasted sales for the next four months for each product?**
+
+## Model Description
+
+This sales forecast was created using an ARIMA (Autoregressive Integrated Moving Average) model. The model is fitted to the historical sales data for each product type to identify patterns in the data and to forecast future sales. The ARIMA model is a type of time series model that takes into account the past values and errors in the data to make predictions. The order of the model, specified as (1,1,1), represents the number of autoregressive, differencing, and moving average terms used in the model. Autoregressive terms capture the relationship between the current value and the previous values, while the moving average terms capture the relationship between the errors and their previous values. The differencing term is used to remove any trend or seasonality present in the data. The forecasted values obtained from the ARIMA model are then stored in the forecast key of the corresponding product's dictionary and printed for each product type.
+
+## Results
+
+1. The ARIMA forecast model predicted that Jacket sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
+2. The ARIMA forecast model predicted that Shirt sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
+3. The ARIMA forecast model predicted that Trousers sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7.00, 8.00, 9.00, and 10.00.
+
 
 ### Predict the top-selling product types in the next quarter.
 
