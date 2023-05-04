@@ -181,3 +181,12 @@ JOIN orders o ON s.order_id = o.order_id
 WHERE o.order_date >= '2021-04-01' AND o.order_date <= '2021-06-30'
 GROUP BY p.product_type
 ORDER BY total_quantity DESC;
+
+--Order History
+SELECT c.customer_id, o.order_id, o.order_date, p.product_type, s.quantity
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN sales s ON o.order_id = s.order_id
+JOIN products p ON s.product_id = p.product_id
+WHERE o.order_date >= '2021-01-01' AND o.order_date < '2021-09-30'
+ORDER BY c.customer_id, o.order_id;
