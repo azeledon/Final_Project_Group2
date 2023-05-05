@@ -190,3 +190,45 @@ JOIN sales s ON o.order_id = s.order_id
 JOIN products p ON s.product_id = p.product_id
 WHERE o.order_date >= '2021-01-01' AND o.order_date < '2021-09-30'
 ORDER BY c.customer_id, o.order_id;
+
+---- Forecast
+SELECT 
+    c.customer_id, c.gender, c.age, c.home_address, c.zip_code, c.city, c.state, c.country,
+    o.order_id, o.payment, o.order_date, o.delivery_date,
+    p.product_id, p.product_type, p.product_name, p.size, p.colour, p.price, p.quantity,
+    s.sales_id, s.price_per_unit, s.quantity, s.total_price
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN sales s ON o.order_id = s.order_id
+JOIN products p ON s.product_id = p.product_id;
+
+
+--Sales First Quarter
+SELECT 
+    c.customer_id,
+    p.product_name,
+    SUM(s.total_price) as total_sales,
+    AVG(p.price) as avg_product_price,
+    COUNT(DISTINCT o.order_id) as num_orders,
+    COUNT(DISTINCT p.product_id) as num_products
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN sales s ON o.order_id = s.order_id
+JOIN products p ON s.product_id = p.product_id
+WHERE o.order_date >= '202-01-01' AND o.order_date < '2021-04-01' 
+GROUP BY c.customer_id, p.product_name
+
+--Sales Second Quarter
+SELECT 
+    c.customer_id,
+    p.product_name,
+    SUM(s.total_price) as total_sales,
+    AVG(p.price) as avg_product_price,
+    COUNT(DISTINCT o.order_id) as num_orders,
+    COUNT(DISTINCT p.product_id) as num_products
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN sales s ON o.order_id = s.order_id
+JOIN products p ON s.product_id = p.product_id
+WHERE o.order_date >= '2021-04-01' AND o.order_date < '2021-07-01' 
+GROUP BY c.customer_id, p.product_name
