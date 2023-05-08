@@ -232,3 +232,177 @@ JOIN sales s ON o.order_id = s.order_id
 JOIN products p ON s.product_id = p.product_id
 WHERE o.order_date >= '2021-04-01' AND o.order_date < '2021-07-01' 
 GROUP BY c.customer_id, p.product_name
+
+SELECT 
+    sales.sales_id,
+    sales.total_price,
+    sales.quantity,
+    sales.price_per_unit,
+    orders.order_date,
+    products.product_name
+FROM 
+    sales
+INNER JOIN 
+    orders ON sales.order_id = orders.order_id
+INNER JOIN 
+    products ON sales.product_id = products.product_id;
+
+
+--Top Ten Products by Name
+SELECT 
+    products.product_name, 
+    SUM(sales.quantity) as total_quantity_sold
+FROM 
+    sales
+INNER JOIN 
+    orders ON sales.order_id = orders.order_id
+INNER JOIN 
+    products ON sales.product_id = products.product_id
+GROUP BY 
+    products.product_name
+ORDER BY 
+    total_quantity_sold DESC
+LIMIT 10;
+
+--
+
+SELECT 
+    p.product_name, 
+    SUM(s.quantity) AS total_quantity_sold
+FROM 
+    sales s
+    JOIN products p ON s.product_id = p.product_id
+    JOIN orders o ON s.order_id = o.order_id
+WHERE 
+    o.delivery_date >= DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0)
+    AND o.delivery_date < DATEADD(month, DATEDIFF(month, 0, GETDATE())+1, 0)
+GROUP BY 
+    p.product_name
+ORDER BY 
+    total_quantity_sold DESC
+LIMIT 10;
+
+--
+SELECT p.product_name, SUM(s.total_price) AS total_sales
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+JOIN orders o ON s.order_id = o.order_id
+WHERE DATE_TRUNC('month', o.order_date) = DATE_TRUNC('month', DATE_TRUNC('month', NOW()) - INTERVAL '1 MONTH')
+GROUP BY p.product_name
+ORDER BY total_sales DESC
+
+--
+
+SELECT p.product_name, SUM(s.total_price) AS total_sales
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+JOIN orders o ON s.order_id = o.order_id
+WHERE o.order_date >= '2021-10-01' AND o.order_date < '2021-11-01'
+GROUP BY p.product_name
+ORDER BY total_sales DESC
+---
+
+WITH monthly_sales AS (
+    -- Aggregate the sales data by month
+    SELECT 
+        date_trunc('month', o.order_date) AS order_month,
+        p.product_name,
+        SUM(s.total_price) AS total_sales
+    FROM sales s
+    JOIN products p ON s.product_id = p.product_id
+    JOIN orders o ON s.order_id = o.order_id
+    WHERE o.order_date >= '2021-01-01' AND o.order_date < '2021-11-01'
+    GROUP BY date_trunc('month', o.order_date), p.product_name
+),
+
+-- Use a subquery to get the average monthly sales for each product
+avg_monthly_sales AS (
+    SELECT 
+        product_name,
+        AVG(total_sales) AS avg_monthly_sales
+    FROM monthly_sales
+    GROUP BY product_name
+)
+
+-- Finally, predict the sales for November 2021
+SELECT 
+    product_name,
+    ROUND(avg_monthly_sales * 1.05, 2) AS predicted_sales
+FROM avg_monthly_sales
+ORDER BY predicted_sales DESC
+
+
+----------------------
+
+WITH monthly_sales AS (
+    -- Aggregate the sales data by month
+    SELECT 
+        date_trunc('month', o.order_date) AS order_month,
+        p.product_name,
+        SUM(s.total_price) AS total_sales
+    FROM sales s
+    JOIN products p ON s.product_id = p.product_id
+    JOIN orders o ON s.order_id = o.order_id
+    WHERE o.order_date >= '2021-01-01' AND o.order_date < '2021-11-01'
+    GROUP BY date_trunc('month', o.order_date), p.product_name
+),
+
+-- Use a subquery to get the average monthly sales for each product
+avg_monthly_sales AS (
+    SELECT 
+        product_name,
+        AVG(total_sales) AS avg_monthly_sales
+    FROM monthly_sales
+    GROUP BY product_name
+),
+
+-- Calculate the predicted sales for each product in November 2021
+predicted_sales AS (
+    SELECT 
+        product_name,
+        ROUND(avg_monthly_sales * 1.05, 2) AS predicted_sales
+    FROM avg_monthly_sales
+)
+
+-- Finally, select the top 5 products that are predicted to sell the most in November 2021
+SELECT 
+    product_name,
+    predicted_sales
+FROM predicted_sales
+ORDER BY predicted_sales DESC
+LIMIT 5;
+
+---------------------------
+
+--predict the total revenue by product type
+
+SELECT 
+    p.product_type,
+    EXTRACT(YEAR FROM o.order_date) AS order_year,
+    EXTRACT(MONTH FROM o.order_date) AS order_month,
+    SUM(s.total_price) AS total_revenue
+FROM
+    customers c
+    INNER JOIN orders o ON c.customer_id = o.customer_id
+    INNER JOIN sales s ON o.order_id = s.order_id
+    INNER JOIN products p ON s.product_id = p.product_id
+GROUP BY
+    p.product_type,
+    EXTRACT(YEAR FROM o.order_date),
+    EXTRACT(MONTH FROM o.order_date)
+
+------predict the total revenue by product name
+SELECT 
+    p.product_name,
+    EXTRACT(YEAR FROM o.order_date) AS order_year,
+    EXTRACT(MONTH FROM o.order_date) AS order_month,
+    SUM(s.total_price) AS total_revenue
+FROM
+    customers c
+    INNER JOIN orders o ON c.customer_id = o.customer_id
+    INNER JOIN sales s ON o.order_id = s.order_id
+    INNER JOIN products p ON s.product_id = p.product_id
+GROUP BY
+    p.product_name,
+    EXTRACT(YEAR FROM o.order_date),
+    EXTRACT(MONTH FROM o.order_date)
