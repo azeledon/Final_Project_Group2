@@ -41,15 +41,39 @@ In today's highly competitive market, businesses need to have a comprehensive un
 
 - **Project Manager:** This person will be responsible for managing the overall project and ensuring that it is completed on time. She will work closely with all team members to ensure that each person's role is clearly defined and that everyone is meeting their deadlines. The Project Manager will also communicate with stakeholders to provide regular updates on the project's progress and ensure that their needs are being met.
 
-## Project Phases
+## Project Phases: ETL
 
-### 1. Data Collection 
+### 1. Data Extraction
 
 Source of the data: https://www.kaggle.com/datasets/ruchi798/shopping-cart-database. 
 
 The dataset contains four CSV files containing sales details for the 12 months of the year 2021.  Each file contains anywhere from 1000 to 5001  rows and 5-9  columns. The columns are as follows: customer id, customer name, gender, age, home address, zip code, city, state , country, order id, payment, order date, delivery date, sales id, product id, price per unite, quantity, total price, product type, product name, size, color, price, quantity.
 
-### 2. Data Exploration
+### 2. Data Transformation
+
+### Data Cleaning with Python 
+
+To clean the data, we followed a systematic process that involved several steps. First, we assessed the data to identify any issues, such as missing values, duplicates, or errors. We then decided on a strategy for handling each of these issues.
+
+For instance, if we found missing values, we might have chosen to impute them using statistical methods, such as mean or median imputation, or we might have dropped the affected rows. If we discovered duplicates, we might have removed them by keeping only the first occurrence of each record or by aggregating the data.
+
+We also checked for inconsistent or incorrect data types, such as strings in numerical fields, and converted them to the appropriate data type. Additionally, we looked for outliers and decided whether to remove them or keep them depending on their significance to the analysis.
+
+After applying these cleaning strategies, we verified the data to ensure that it was free from errors and inconsistencies. We ran data quality checks, such as checking for missing values, duplicates, and outliers. If any issues were still present, we revisited the cleaning process until the data met the desired quality standards.
+
+**Python Tools used for Data Cleaning**
+
+- **Jupyter Notebook:** To write and execute the Python code.
+
+- **Pandas:** To perform data manipulation and analysis.
+
+- **Matplotlib:** To create visualizations and plots for better understanding and analysis.
+
+### ERD
+
+We created an ERD using QuickDBD
+
+![](Resources/ERD_1.png)
 
 ### Data Description
 
@@ -111,30 +135,6 @@ Furthermore, the team analyzed the products and sales CSV files using the "descr
 ![](Resources/delivery_time_distribution.png)
 
 By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. This goal will be achieved by using several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. 
-
-### Data Cleaning with Python 
-
-To clean the data, we followed a systematic process that involved several steps. First, we assessed the data to identify any issues, such as missing values, duplicates, or errors. We then decided on a strategy for handling each of these issues.
-
-For instance, if we found missing values, we might have chosen to impute them using statistical methods, such as mean or median imputation, or we might have dropped the affected rows. If we discovered duplicates, we might have removed them by keeping only the first occurrence of each record or by aggregating the data.
-
-We also checked for inconsistent or incorrect data types, such as strings in numerical fields, and converted them to the appropriate data type. Additionally, we looked for outliers and decided whether to remove them or keep them depending on their significance to the analysis.
-
-After applying these cleaning strategies, we verified the data to ensure that it was free from errors and inconsistencies. We ran data quality checks, such as checking for missing values, duplicates, and outliers. If any issues were still present, we revisited the cleaning process until the data met the desired quality standards.
-
-**Python Tools used for Data Cleaning**
-
-- **Jupyter Notebook:** To write and execute the Python code.
-
-- **Pandas:** To perform data manipulation and analysis.
-
-- **Matplotlib:** To create visualizations and plots for better understanding and analysis.
-
-### ERD
-
-We created an ERD using QuickDBD
-
-![](Resources/ERD_1.png)
 
 ## Data Analysis
 
@@ -228,6 +228,8 @@ This prediction model was built using a linear regression algorithm in Python. T
 ## Problems Found
 
 We could not detect seasonality in this data set (i.e., whether there are certain months of the year when sales are consistently higher or lower). The seasonal_decompose function requires at least two full seasonal cycles to properly decompose the time series. Since we use monthly data, a seasonal cycle would be 12 months, so we would need at least 24 months of data. In this case, we only have 10 months of data, which is not enough to perform the seasonal decomposition. Therefore, we cannot analyze the seasonality of the sales data with this particular dataset. We would need to gather more data over a longer period of time to perform this analysis.
+
+## Recommendations
 
 
 
