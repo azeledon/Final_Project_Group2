@@ -10,10 +10,10 @@ In today's highly competitive market, businesses need to have a comprehensive un
 
 ## Objectives
 
-1. Analyze the customer behavior and trends.
+1. Describe customer demographics and sales statistics.
 2. Determine the popular products and categories.
 3. Identify the revenue generation patterns and trends.
-4. Create predictive models to forecast future sales, customer churn, and customer lifetime value.
+4. Create predictive models to forecast future sales.
 
 ## Methodology
 
