@@ -215,7 +215,32 @@ Total quantity sold: 236
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
 
+## Correlation Matrix
 
+![](Resources/corr_matrix.png)
+
+## Is there a correlation between sales and age?
+
+![](Resources/age_total_sales.png)
+
+- The correlation coefficient between age and sales is 0.12, which indicates a weak positive correlation between age and sales.
+- The p-value for the correlation is 0.34, which is greater than the commonly used significance level of 0.05. This means that we fail to reject the null hypothesis that there is no correlation between age and sales.
+- The F-value for the regression is 0.93, which is less than 1. This means that the regression model does not explain much of the variation in the data.
+- The R-squared value for the regression is 0.02, which means that only 2% of the variability in sales can be explained by age.
+- The slope of the regression line is 0.88, which means that on average, for each one unit increase in age, there is an increase of 0.88 units in sales.
+- The 95% confidence interval for the slope is (-0.95, 2.71), which means that we are 95% confident that the true slope of the regression line falls within this interval. The interval includes zero, which means that we cannot be confident that there is a significant linear relationship between age and sales.
+
+## Is there a correlation beetween product type and sales?
+
+![](Resources/heatmap_age_product.png)
+
+- For all three product types (Jacket, Shirt, and Trousers), the F-statistic is very high, indicating a strong relationship between the one-hot encoded product feature and the age variable.
+- The p-value for all three product types is 0.00000000, indicating that the relationships are statistically significant and unlikely to have occurred by chance.
+- For column Jacket: The negative R-squared value of -0.01346217 indicates that there is a weak negative linear relationship between the one-hot encoded 'Jacket' feature and the 'age' variable.
+- For column Shirt: The negative R-squared value of -0.00312433 indicates that there is a very weak negative linear relationship between the one-hot encoded 'Shirt' feature and the 'age' variable.
+- For column Trousers: The positive R-squared value of 0.02233025 indicates that there is a weak positive linear relationship between the one-hot encoded 'Trousers' feature and the 'age' variable.
+- The results suggest that there is a statistically significant but weak relationship between the product type and customer age. Specifically, the correlation matrix shows that the product type has a negative correlation with age, meaning that younger customers are more likely to buy jackets and shirts, while older customers are more likely to buy trousers. However, the R-squared values are low, indicating that the relationship is not very strong.
+- As a business, we can use this information to better target your marketing efforts and product offerings to different age groups. For example, we might consider promoting jackets and shirts to younger customers and trousers to older customers.
 
 # Predictions
 
