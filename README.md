@@ -8,6 +8,22 @@ This project will analyze retail sales, including product types, customer detail
 
 In today's highly competitive market, businesses need to have a comprehensive understanding of their customers, sales trends, and product performance to remain successful. The goal of this project is to analyze e-commerce sales data using various analytical techniques and tools to gain insights into customer behavior, sales trends, and revenue generation. Furthermore, the insights gained from this project will help the online businesses identify their top-performing products, target their marketing efforts more effectively, and optimize their sales strategies to increase revenue and customer satisfaction.
 
+## Question
+
+- What is the correlation between customer buying behavior and company revenue? 
+
+## Goal 
+
+- Increase company revenue through understanding customer purchasing behavior and identifying factors that influence this relationship. Develop strategies to forecast and enhance sales based on this understanding.
+
+## Null Hypothesis
+
+- Customer purchasing behavior is not related to company revenue, and there are no factors that influence this relationship.
+
+## Alternative Hypothesis 
+
+- Customer purchasing behavior is related to company revenue, and there are several factors that influence this relationship, including pricing and customer demographics.
+
 ## Objectives
 
 1. Describe customer demographics and sales statistics.
@@ -198,6 +214,8 @@ Total quantity sold: 236
 - 50% of customers are between 34 and 63 years old and purchased 2 units.
 - 75% of customers are over 63 years old and purchased 3 units.
 - The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
+
+
 
 # Predictions
 
