@@ -282,18 +282,6 @@ Total quantity sold: 236
 
 - In summary, the linear regression model suggests a statistically significant relationship between 'age' and 'price', although the model has a relatively low R-squared value. It is important to consider the limitations of the model and further evaluate its assumptions and performance before drawing definitive conclusions.
 
-## Is there a correlation beetween product type and sales?
-
-![](Resources/heatmap_age_product.png)
-
-- For all three product types (Jacket, Shirt, and Trousers), the F-statistic is very high, indicating a strong relationship between the one-hot encoded product feature and the age variable.
-- The p-value for all three product types is 0.00000000, indicating that the relationships are statistically significant and unlikely to have occurred by chance.
-- For column Jacket: The negative R-squared value of -0.01346217 indicates that there is a weak negative linear relationship between the one-hot encoded 'Jacket' feature and the 'age' variable.
-- For column Shirt: The negative R-squared value of -0.00312433 indicates that there is a very weak negative linear relationship between the one-hot encoded 'Shirt' feature and the 'age' variable.
-- For column Trousers: The positive R-squared value of 0.02233025 indicates that there is a weak positive linear relationship between the one-hot encoded 'Trousers' feature and the 'age' variable.
-- The results suggest that there is a statistically significant but weak relationship between the product type and customer age. Specifically, the correlation matrix shows that the product type has a negative correlation with age, meaning that younger customers are more likely to buy jackets and shirts, while older customers are more likely to buy trousers. However, the R-squared values are low, indicating that the relationship is not very strong.
-- As a business, we can use this information to better target your marketing efforts and product offerings to different age groups. For example, we might consider promoting jackets and shirts to younger customers and trousers to older customers.
-
 ## Is there a correlation between product type and age?
 
 ![](Resources/age_product_corr.png)
