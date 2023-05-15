@@ -2,6 +2,7 @@
 
 ![](Resources/max-harlynking-CDLBz2lPpLM-unsplash.jpg)
 
+## Edits by Katelin
 ## Project Overview
 
 This project will analyze retail sales, including product types, customer details, count of orders, etc. This topic was selected by group consensus that sales was an interesting topic and has the ability to be predictable and forecasted. When examining sales, the dataset may suggest that certain products are more susceptible to lower sales. Retail sales are broad enough to leverage many processes such as SQL, Python, API lines, ETL, and much more; which ultimately allowed for a free range of manipulating the dataset to further the study. With many variables, product types, product colors, count of products purchased, and customer details. The dataset is largely available for the exploration of many questions and hypotheses.
@@ -91,7 +92,7 @@ We created an ERD using QuickDBD
 
 ![](Resources/ERD_1.png)
 
-### Data Description
+### Data Description (Edits by Diana)
 
 One important step in completing the project is to describe the data. Understanding the nature of the data will help team members determine the types of analysis that can be performed.
 
@@ -152,7 +153,7 @@ Furthermore, the team analyzed the products and sales CSV files using the "descr
 
 By analyzing this data, we can answer a variety of business-related questions and make informed decisions to improve sales performance. This goal will be achieved by using several programming languages and tools, including SQL, Python, R, and Tableau, to extract, clean, transform, and visualize the data. 
 
-## Data Analysis
+## Data Analysis (Edits by Ana)
 
 **Sales Trend Over Months**
 
@@ -332,12 +333,31 @@ R-squared: 0.01355351
 
 - The R-squared values are very low for all columns, suggesting that the independent variables (Jacket, Shirt, Trousers, gender) explain very little of the variation in the dependent variable (price).
 
-## Problems Found
+## Decision Tree (Edits by Natalia)
+
+## Summary
+
+- Significant variables that help to target marketing efforts and predict sales:
+Age
+Gender
+Price
+Product Type
+
+- Older customers tend to buy more expensive products than younger customers. 
+- Older customers tend to buy more quantity of products than younger customers. 
+- As the gender of a buyer becomes more male-dominated, the quantity of products purchased tends to decrease slightly.
+- As the customers' age increases, the likelihood of them buying trousers also increases slightly.
+- As the customers' age increases, the likelihood of them buying jackets decreases slightly.
+
+## Problems Found/Limitations
 
 We could not detect seasonality in this data set (i.e., whether there are certain months of the year when sales are consistently higher or lower). The seasonal_decompose function requires at least two full seasonal cycles to properly decompose the time series. Since we use monthly data, a seasonal cycle would be 12 months, so we would need at least 24 months of data. In this case, we only have 10 months of data, which is not enough to perform the seasonal decomposition. Therefore, we cannot analyze the seasonality of the sales data with this particular dataset. We would need to gather more data over a longer period of time to perform this analysis.
 
-## Recommendations
+## Future Analysis/Recommendations
 
+- Collect data over a longer period of time (24 months) to be able to analyze seasonality in the sales data. 
+
+- Collect data at a higher frequency, such as weekly or daily, to better capture any shorter-term patterns or trends in sales. This could provide more insight into the seasonality of the sales data and help inform future business decisions.
 
 
 
