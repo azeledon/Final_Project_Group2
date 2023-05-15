@@ -159,7 +159,7 @@ By analyzing this data, we can answer a variety of business-related questions an
 - The month with the highest sales was March with a total of $131,364.00
 - The month with the lowest sales was October with a total of $84,266.00
 
-![](Resources/sales_trends_over_months.png)
+![](Resources/Tableau-PNG/)
 
 **What are the most profitable product types and sizes among our customers?**
 
@@ -242,31 +242,6 @@ Total quantity sold: 236
 - The results suggest that there is a statistically significant but weak relationship between the product type and customer age. Specifically, the correlation matrix shows that the product type has a negative correlation with age, meaning that younger customers are more likely to buy jackets and shirts, while older customers are more likely to buy trousers. However, the R-squared values are low, indicating that the relationship is not very strong.
 - As a business, we can use this information to better target your marketing efforts and product offerings to different age groups. For example, we might consider promoting jackets and shirts to younger customers and trousers to older customers.
 
-# Predictions
-
-## Model 1: ARIMA Sales Forecasting Model
-
-- **What are the forecasted sales for the next four months for each product?**
-
-![](Resources/sales_forecast.png)
-
-## Model Description
-
-This sales forecast was created using an ARIMA (Autoregressive Integrated Moving Average) model. The model is fitted to the historical sales data for each product type to identify patterns in the data and to forecast future sales. The ARIMA model is a type of time series model that takes into account the past values and errors in the data to make predictions. The order of the model, specified as (1,1,1), represents the number of autoregressive, differencing, and moving average terms used in the model. Autoregressive terms capture the relationship between the current value and the previous values, while the moving average terms capture the relationship between the errors and their previous values. The differencing term is used to remove any trend or seasonality present in the data. The forecasted values obtained from the ARIMA model are then stored in the forecast key of the corresponding product's dictionary and printed for each product type.
-
-## Results
-
-1. The ARIMA forecast model predicted that Jacket sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
-2. The ARIMA forecast model predicted that Shirt sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
-3. The ARIMA forecast model predicted that Trousers sales will increase steadily over the next 4 months from 7 to 10 units, with sales figures of approximately 7, 8, 9, and 10.
-
-## Model 2: Predict the top-selling product types in the next quarter.
-
-![](Resources/sales_prediction_next_quarter.png)
-
-## Model Description
-
-This prediction model was built using a linear regression algorithm in Python. The dataset includes three product types - Trousers, Shirt, and Jacket, along with their corresponding total quantities. The dataset was split into a training set and a test set using the train_test_split function from scikit-learn. The training set was then transformed into a sparse matrix of token counts using the CountVectorizer function. The LinearRegression function from scikit-learn was used to train the model on the transformed training set. The trained model was then used to make predictions on the test set. The mean squared error was calculated using the mean_squared_error function from scikit-learn. Finally, new data was provided to the model for prediction, and the output was displayed. The model predicts the total quantity of each product type for the next quarter.
 
 ## Problems Found
 
