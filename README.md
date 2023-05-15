@@ -266,6 +266,8 @@ Total quantity sold: 236
 
 ![](Resources/age_vs_price.png)
 
+![](Resources/age_price_prediction.png)
+
 - R-squared (R-squared = 0.171): The R-squared value indicates that approximately 17.1% of the variation in the 'price' variable can be explained by the linear relationship with the 'age' variable. This means that the linear regression model does not capture a large portion of the variability in the data.
 
 - Adjusted R-squared (Adj. R-squared = 0.157): The adjusted R-squared value takes into account the number of predictors in the model. It indicates that approximately 15.7% of the variation in the 'price' variable can be explained by the 'age' variable while considering the model's degrees of freedom.
