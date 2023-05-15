@@ -159,13 +159,29 @@ By analyzing this data, we can answer a variety of business-related questions an
 - The month with the highest sales was March with a total of $131,364.00
 - The month with the lowest sales was October with a total of $84,266.00
 
-![](Resources/Tableau-PNG/)
+![](Resources/sales_over_months.png)
 
-**What are the most profitable product types and sizes among our customers?**
+- The total sales of all three product types increased from February to March, and then decreased from March to April.
 
-![](Resources/table_topten_profitable_by_gender.png)
+- Among the three product types, Jacket had the highest sales in the first and sixth months, whereas Shirt had the highest sales in the fourth and eighth months, and Trousers had the highest sales in the seventh month.
 
-![](Resources/top_ten_most_profitable_products.png)
+- Trousers had the lowest sales in most months, except in the fifth month where Shirt had the lowest sales.
+
+- Overall, Jacket had the highest total sales across the 10 months, followed by Shirt and Trousers.
+
+**What is the average quantity of products sold by age group?**
+
+![](Resources/average_quantity.png)
+
+- Customers in the 41-50 year old age group tend to purchase the largest quantity of products on average, with an average quantity sold of 61.7.
+- Customers in the 0-30 year old age group tend to purchase the smallest quantity of products on average, with an average quantity sold of 57.5.
+- The average quantity sold is relatively similar for customers in the 31-60 year old age groups, ranging from 59.5 to 61.7 on average.
+- Customers in the 61-70 year old age group tend to purchase a slightly lower quantity of products on average compared to the other age groups, with an average quantity sold of 59.5.
+- There is a general trend of decreasing average quantity sold as age increases, with the highest average quantity sold in the youngest age group and the lowest in the oldest age group.
+- The difference in average quantity sold between the youngest and oldest age groups is relatively small, with only about a 25% decrease in average quantity sold from the youngest age group to the oldest.
+- There is some variability in the average quantity sold within each age group, as seen by the variation in the markers along the line. This suggests that while age may be a useful predictor of quantity sold, there are likely other factors that are influencing customer behavior as well.
+- Overall, this plot provides some insight into how quantity sold varies by age group, but additional analysis would be needed to fully understand the drivers of this variation and to identify potential strategies for increasing sales.
+- The fact that the average quantities sold are relatively similar across age groups suggests that the products being sold may be appealing to a wide range of customers, regardless of age. However, it's also possible that there are underlying demographic or psychographic differences between the age groups that are influencing their purchasing behavior.
 
 **What are the products with the highest and lowest sales? What are the best selling products?**
 
@@ -181,43 +197,45 @@ Total quantity sold: 527
 
 Total quantity sold: 236
 
-![](Resources/total_quantity_sold_by_product.png)
+## Top 10 Most Purchased Products
 
-![](Resources/top_ten_products_by_sales.png)
+![](Resources/top_ten_purchased_products.png)
 
-**Which gender has the highest total quantity sold?"**
+- The product name "Denim" has the highest quantity sold, with a total of 4204 units sold.
+- The product name "Wool" has the lowest quantity sold, with a total of 1163 units sold.
+- The total quantity sold for each product name ranges from 1163 to 4204, indicating a varying level of demand for each product.
+- It's possible that the popularity of each product is influenced by factors such as seasonality, fashion trends, and customer preferences.
 
-- Gender with the highest total quantity sold overall: Female
+## Top 10 Most Profitable Products
 
-**What are the top selling products by gender?**
+![](Resources/top_profitable.png)
 
-![](Resources/table_best_selling_per_gender.png)
-
-![](table_best_selling_per_gender.png)
-
-![](Resources/sales_by_gender_product.png)
-
-- The mean quantity sold across all genders is 2.048594, which indicates that on average, 2 products are sold per purchase.
-- The median quantity sold is 2, which suggests that half of the purchases consist of 2 products.
-- The mode quantity sold is mostly 1 or 2 products, with some exceptions.
-- The standard deviation of the quantity sold is 0.889753, indicating that there is some variability in the amount of products sold per purchase.
-
-**How does the quantity sold vary across different age groups? Are there any trends or patterns in the quantity sold by age group?**
-
-![](Resources/quantity_sold_by_age.png)
-
-- The average age of customers in the dataset is approximately 48.8 years.
-- The average quantity sold per transaction is approximately 2.05 units.
-- The standard deviation of the quantity sold is 0.89 units, indicating that there is relatively low variability in the amount sold.
-- The minimum age in the dataset is 20 years old and the minimum quantity sold is 1 unit.
-- 25% of customers are under 34 years old and purchased 1 unit.
-- 50% of customers are between 34 and 63 years old and purchased 2 units.
-- 75% of customers are over 63 years old and purchased 3 units.
-- The maximum age in the dataset is 80 years old and the maximum quantity sold is 8 units.
+- Denim is the most profitable product name, with a total revenue of 54,602
+- The dataset consisted of 35 unique product names.
+- The average total revenue across all product names was 30,050.29, with a standard deviation of 5,111.53.
+- The lowest total revenue was 23,387.
 
 ## Correlation Matrix
 
 ![](Resources/corr_matrix.png)
+
+- The diagonal values are all 1s because they represent the correlation between the features and themselves.
+
+- The off-diagonal values represent the correlation between two features. The value ranges from -1 to 1. The closer the value is to 1, the stronger the positive correlation is. Conversely, the closer the value is to -1, the stronger the negative correlation is. A value of 0 indicates no correlation between the two features.
+
+- Looking at the matrix, we can see that there are only a few strong correlations between the features. For instance, the 'customer_id_x', 'order_id', and 'product_id' features are highly positively correlated with each other with a correlation of 1. This suggests that these three features are highly related, and this may be because they are all related to customer purchases.
+
+- Another strong positive correlation exists between 'quantity' and 'sales', with a correlation of 0.918. This suggests that when the quantity of a product increases, so does the sales.
+
+- Other notable correlations include a positive correlation between 'price' and 'age' and 'sales' and 'price'. Additionally, there is a weak positive correlation between 'payment' and 'age', and a weak negative correlation between 'gender' and 'quantity'.
+
+- There is a positive correlation between 'price' and 'age', meaning that as the age increases, so does its price.
+
+- There is also a positive correlation between 'sales' and 'price', meaning that as the price of a product increases, so do its sales.
+
+- There is a weak positive correlation between 'payment' and 'age', meaning that as the age of a buyer increases, so does the amount they pay.
+
+- Finally, there is a weak negative correlation between 'gender' and 'quantity', meaning that as the gender of a buyer becomes more male-dominated, the quantity of products purchased tends to decrease slightly.
 
 ## Is there a correlation between sales and age?
 
@@ -229,6 +247,38 @@ Total quantity sold: 236
 - The R-squared value for the regression is 0.02, which means that only 2% of the variability in sales can be explained by age.
 - The slope of the regression line is 0.88, which means that on average, for each one unit increase in age, there is an increase of 0.88 units in sales.
 - The 95% confidence interval for the slope is (-0.95, 2.71), which means that we are 95% confident that the true slope of the regression line falls within this interval. The interval includes zero, which means that we cannot be confident that there is a significant linear relationship between age and sales.
+
+## Is there a correlation between price and age?
+
+![](Resources/age_price_corr.png)
+
+- Correlation coefficient: The correlation coefficient between 'age' and 'price' is approximately 0.413. The correlation coefficient measures the strength and direction of the linear relationship between two variables. A value of 0.413 suggests a moderate positive correlation between 'age' and 'price'. This means that there is a tendency for prices to increase as age increases, but the relationship is not extremely strong.
+
+- P-value: The associated p-value for the correlation coefficient is approximately 0.000938. The p-value represents the probability of obtaining a correlation coefficient as extreme as the observed value (or more extreme) if there were no true correlation in the population. In this case, the p-value is less than 0.05, indicating that the correlation between 'age' and 'price' is statistically significant. This means that it is unlikely to observe a correlation coefficient as large as 0.413 purely due to chance if there were no true correlation between the variables.
+
+- In summary, based on the correlation coefficient and p-value, we can conclude that there is a statistically significant moderate positive correlation between 'age' and 'price'. However, it's important to note that correlation does not imply causation, and there may be other factors influencing the relationship between 'age' and 'price'. Further analysis and consideration of the context are necessary to fully understand the implications of the correlation.
+
+## Linear Regression Model
+
+![](Resources/linear_age_price.png)
+
+![](Resources/OLS_age_price.png)
+
+![](Resources/age_vs_price.png)
+
+- R-squared (R-squared = 0.171): The R-squared value indicates that approximately 17.1% of the variation in the 'price' variable can be explained by the linear relationship with the 'age' variable. This means that the linear regression model does not capture a large portion of the variability in the data.
+
+- Adjusted R-squared (Adj. R-squared = 0.157): The adjusted R-squared value takes into account the number of predictors in the model. It indicates that approximately 15.7% of the variation in the 'price' variable can be explained by the 'age' variable while considering the model's degrees of freedom.
+
+- F-statistic (F-statistic = 12.14): The F-statistic tests the overall significance of the linear regression model. The associated p-value (Prob (F-statistic)) of 0.000938 suggests that the model is statistically significant overall. However, it's worth noting that the R-squared value is relatively low, indicating that the model may not fit the data well.
+
+- Coefficients and p-values: The coefficient for the constant term (intercept) is 105.0770, and the coefficient for the 'age' variable is 0.0587. Both coefficients have associated p-values (<0.05), indicating that they are statistically significant. The intercept represents the estimated average 'price' when 'age' is zero, which may or may not be meaningful depending on the context. The coefficient for 'age' suggests that, on average, for each unit increase in 'age', the 'price' increases by 0.0587 units.
+
+- Standard errors and t-statistics: The standard errors associated with the coefficients measure the variability or uncertainty in the estimates. The t-statistics (coef / std err) provide a measure of the coefficient's significance. In this case, both the intercept and 'age' coefficient have t-values greater than 2 in magnitude, indicating their statistical significance.
+
+- Other statistical information: The summary also provides additional information, such as the Log-Likelihood, AIC (Akaike Information Criterion), BIC (Bayesian Information Criterion), Omnibus test, Durbin-Watson statistic, Jarque-Bera test, skewness, kurtosis, and the condition number.
+
+- In summary, the linear regression model suggests a statistically significant relationship between 'age' and 'price', although the model has a relatively low R-squared value. It is important to consider the limitations of the model and further evaluate its assumptions and performance before drawing definitive conclusions.
 
 ## Is there a correlation beetween product type and sales?
 
@@ -242,6 +292,55 @@ Total quantity sold: 236
 - The results suggest that there is a statistically significant but weak relationship between the product type and customer age. Specifically, the correlation matrix shows that the product type has a negative correlation with age, meaning that younger customers are more likely to buy jackets and shirts, while older customers are more likely to buy trousers. However, the R-squared values are low, indicating that the relationship is not very strong.
 - As a business, we can use this information to better target your marketing efforts and product offerings to different age groups. For example, we might consider promoting jackets and shirts to younger customers and trousers to older customers.
 
+## Is there a correlation between product type and age?
+
+![](Resources/age_product_corr.png)
+
+- There is a negative correlation between 'age' and 'Jacket', with a value of -0.013462. This suggests that as the customers' age increases, the likelihood of them buying jackets decreases slightly.
+- There is a weak negative correlation between 'age' and 'Shirt', with a value of -0.003124. This suggests that there is little to no relationship between the customers' age and their likelihood of buying shirts.
+- There is a weak positive correlation between 'age' and 'Trousers', with a value of 0.022330. This suggests that as the customers' age increases, the likelihood of them buying trousers also increases slightly.
+
+- For column Jacket:
+F-statistic: 7842.13812922, p-value: 0.00000000
+R-squared: -0.01346217
+
+- For column Shirt:
+F-statistic: 7842.13812922, p-value: 0.00000000
+R-squared: -0.00312433
+
+- For column Trousers:
+F-statistic: 7927.61725557, p-value: 0.00000000
+R-squared: 0.02233025
+
+- The results suggest that there is a statistically significant but weak relationship between the product type and customer age. Specifically, the correlation matrix shows that the product type has a negative correlation with age, meaning that younger customers are more likely to buy jackets and shirts, while older customers are more likely to buy trousers. However, the R-squared values are low, indicating that the relationship is not very strong.
+
+- As a business, we can use this information to better target your marketing efforts and product offerings to different age groups. For example, we might consider promoting jackets and shirts to younger customers and trousers to older customers.
+
+## Is there a correlation between gender and product type?
+
+![](Resources/gender_product_corr.png)
+
+For column Jacket:
+F-statistic: 737.38525926, p-value: 0.00000000
+R-squared: -0.03100088
+
+For column Shirt:
+F-statistic: 737.38525926, p-value: 0.00000000
+R-squared: 0.02093359
+
+For column Trousers:
+F-statistic: 1921.96073705, p-value: 0.00000000
+R-squared: 0.01355351
+
+- From the correlation matrix, we can see that there is a strong negative correlation between Jacket and Shirt (-0.724138), which means that customers who buy jackets are less likely to buy shirts, and vice versa.
+
+- There is also a weak negative correlation between Jacket and gender (-0.031001), indicating that there is a slightly lower likelihood of males buying jackets compared to females.
+
+- In contrast, there is a weak positive correlation between Trousers and gender (0.013554), suggesting that there is a slightly higher likelihood of males buying trousers compared to females.
+
+- The F-statistic is a measure of the significance of the linear regression model, and in this case, all columns have very low p-values (0.00000000), indicating that the linear regression models are significant and that the relationship between the independent variables and the dependent variable is not due to chance.
+
+- The R-squared values are very low for all columns, suggesting that the independent variables (Jacket, Shirt, Trousers, gender) explain very little of the variation in the dependent variable (price).
 
 ## Problems Found
 
