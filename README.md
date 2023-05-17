@@ -219,7 +219,7 @@ Total quantity sold: 236
 - The lowest total revenue was 23,387.
 
 In addition to the previous steps, to render a more organized analysis of the data, we found it neccesary to explore the visualizations  using Tableau.  Tableau is considered a very powerful and fastest growing data visualization tool that can be used in the bussiness field. In this regards, it has been created a Dashboard and a story, having as a base the csv files resulted by the transformation of the data with SQL and Python.
-![](Resources/Tableau - PNG/Sales_Dashboard.png)
+![](Resources/Sales_dashboard.png)
 Furthermore, a story has been created to have a more detailed visual analysis and it could be observed by accesing the following link:
 
  https://public.tableau.com/app/profile/diana.prescura/viz/SalesStory_pptx/Story1?publish=yes
