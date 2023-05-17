@@ -338,9 +338,11 @@ R-squared: 0.01355351
 ## Decision Tree
 - Decision tree built in Jupyter notebook using Sklearn (sscikit-learn) library. Opened in VS code using Graphviz (dot) language.
 - In this model we separated it into 2 sets: input(age, gender, state) and output(product type) and tested it. Then we measured our data for accuracy by splitting it into training and testing data and allocated 80% of our data for training and 20% for testing. After we tested it we saved the file and opened it in VS code to create a visual representation of our tree. 
-- Results: the accuracy is 50-60%, will be better with more data available.
+
 
 <img width="209" alt="image" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/803a79ab-1b99-43a8-ad2c-100a355c416d">
+
+- Results: the accuracy is 50-60%, will be better with more data available.
 
 <img width="308" alt="image" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/c9c8c126-baf0-4a13-82fe-2782b75aafde">
 
