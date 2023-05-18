@@ -353,7 +353,9 @@ R-squared: 0.01355351
 
 - Results: the accuracy is 50-60%, will be better with more data available.
 
-<img width="308" alt="image" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/c9c8c126-baf0-4a13-82fe-2782b75aafde">
+<img width="804" alt="decision tree" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/36909550-639f-4f30-8721-276aa0645e0c">
+
+
 
 ## Summary
 
