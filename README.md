@@ -342,6 +342,8 @@ R-squared: 0.01355351
 
 - The R-squared values are very low for all columns, suggesting that the independent variables (Jacket, Shirt, Trousers, gender) explain very little of the variation in the dependent variable (price).
 
+## Edits by Natalia 
+
 ## Decision Tree
 - Decision tree built in Jupyter notebook using Sklearn (sscikit-learn) library. Opened in VS code using Graphviz (dot) language.
 - In this model we separated it into 2 sets: input(age, gender, state) and output(product type) and tested it. Then we measured our data for accuracy by splitting it into training and testing data and allocated 80% of our data for training and 20% for testing. After we tested it we saved the file and opened it in VS code to create a visual representation of our tree. 
@@ -351,7 +353,9 @@ R-squared: 0.01355351
 
 - Results: the accuracy is 50-60%, will be better with more data available.
 
-<img width="308" alt="image" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/c9c8c126-baf0-4a13-82fe-2782b75aafde">
+<img width="804" alt="decision tree" src="https://github.com/azeledon/Final_Project_Group2/assets/119450584/36909550-639f-4f30-8721-276aa0645e0c">
+
+
 
 ## Summary
 
